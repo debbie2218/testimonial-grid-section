@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1210px;
+}
+
+.card {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid hsl(224, 10%, 45%);
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.quote {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.card-daniel {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  background-image: url('images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.card-jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card-jeanette {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+.card-patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card-kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  height: 720px
+}
+
+
+@media (min-width: 375px) {
+  .card-daniel {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .card-jonathan {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+  }
+
+  .card-kira {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .card-jeanette {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .card-patrick {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
